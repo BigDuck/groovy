@@ -64,9 +64,9 @@ class Hello {
             println iter.next()
         }
         def acoll = ["Groovy", "Java", "Ruby"]
-
         acoll.each{
-            println it
+
+            println it  //it是一个关键字，代表map集合的每个元素
         }
         hash.each{ key, value ->
             println "${key} : ${value}"
@@ -74,6 +74,10 @@ class Hello {
         println("-----------")
         hash.each { key,value ->
             println "${key}:${value}"
+        }
+        println("-----------")
+        hash.each {
+            println(it.getKey()+":"+it.getValue())
         }
 
     }
